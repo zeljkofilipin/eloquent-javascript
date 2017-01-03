@@ -3,6 +3,7 @@ module.exports = function(grunt) {
 
   // Project configuration
   grunt.initConfig({
+
     // Configure ESLint task
     eslint: {
       all: [
@@ -10,8 +11,16 @@ module.exports = function(grunt) {
         '!node_modules/**',
       ],
     },
+
+    // Configure a run task
+    run: {
+      index: {
+        args: ['triangle.js'],
+      },
+    },
+
   });
 
   // Default tasks
-  grunt.registerTask('default', ['eslint']);
+  grunt.registerTask('default', ['eslint', 'run']);
 };
