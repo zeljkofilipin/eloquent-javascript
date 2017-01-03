@@ -1,5 +1,5 @@
-module.exports = function (grunt) {
-  require('load-grunt-tasks')(grunt)
+module.exports = function(grunt) {
+  require('load-grunt-tasks')(grunt);
 
   // Project configuration
   grunt.initConfig({
@@ -7,11 +7,11 @@ module.exports = function (grunt) {
     eslint: {
       all: [
         '**/*.js',
-        '!node_modules/**'
-      ]
-    }
-  })
+        '!node_modules/**',
+      ],
+    },
+  });
 
   // Default tasks
-  grunt.registerTask('default', ['eslint'])
-}
+  grunt.registerTask('default', ['eslint']);
+};
