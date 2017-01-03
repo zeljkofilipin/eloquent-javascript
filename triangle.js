@@ -1,8 +1,4 @@
 'use strict';
-
-var hash = '#';
-
-while (hash.length < 8) {
+for (var hash = '#'; hash.length < 8; hash += '#') {
   console.log(hash);
-  hash = hash + '#';
 }
