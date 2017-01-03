@@ -15,7 +15,7 @@ module.exports = function(grunt) {
     // Configure a run task
     run: {
       index: {
-        args: ['triangle.js'],
+        args: ['fizbuzz.js', 'triangle.js'],
       },
     },
 
