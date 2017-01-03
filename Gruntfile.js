@@ -3,8 +3,15 @@ module.exports = function (grunt) {
 
   // Project configuration
   grunt.initConfig({
+    // Configure ESLint task
+    eslint: {
+      all: [
+        '**/*.js',
+        '!node_modules/**'
+      ]
+    }
   })
 
   // Default tasks
-  grunt.registerTask('default', [])
+  grunt.registerTask('default', ['eslint'])
 }
