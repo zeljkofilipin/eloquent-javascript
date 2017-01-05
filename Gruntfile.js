@@ -14,6 +14,11 @@ module.exports = function(grunt) {
 
     // Configure a run task
     run: {
+      chess: {
+        args: [
+          'chess.js',
+        ],
+      },
       fizbuzz: {
         args: [
           'fizbuzz.js',
