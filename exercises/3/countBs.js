@@ -7,7 +7,7 @@
  */
 function countBs(string) {
 	let numberOfBs = 0;
-	for (let i = 0; i < string.length - 1; i++) {
+	for (let i = 0; i < string.length; i++) {
 		if (string.charAt(i) === 'B') {
 			numberOfBs++;
 		}

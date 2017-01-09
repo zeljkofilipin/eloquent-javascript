@@ -8,7 +8,7 @@
  */
 function countChar(string, character) {
 	let numberOfChars = 0;
-	for (let i = 0; i < string.length - 1; i++) {
+	for (let i = 0; i < string.length; i++) {
 		if (string.charAt(i) === character) {
 			numberOfChars++;
 		}
@@ -17,3 +17,4 @@ function countChar(string, character) {
 }
 
 console.log(countChar('BBC', 'B'));
+console.log(countChar('kakkerlak', 'k'));
