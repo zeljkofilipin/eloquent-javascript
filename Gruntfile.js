@@ -46,6 +46,11 @@ module.exports = function(grunt) {
           'exercises/3/countBs.js',
         ],
       },
+      '3-countChar': {
+        args: [
+          'exercises/3/countChar.js',
+        ],
+      },
     },
 
   });
