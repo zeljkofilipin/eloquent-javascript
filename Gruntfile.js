@@ -36,7 +36,7 @@ module.exports = function(grunt) {
           'exercises/3/min.js',
         ],
       },
-      '4-is-even': {
+      '3-is-even': {
         args: [
           'exercises/3/is_even.js',
         ],
