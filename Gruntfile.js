@@ -14,6 +14,7 @@ module.exports = function(grunt) {
 
     // Configure a run task
     run: {
+      // 2
       '2-triangle': {
         args: [
           'exercises/2/triangle.js',
@@ -27,6 +28,12 @@ module.exports = function(grunt) {
       '2-chess': {
         args: [
           'exercises/2/chess.js',
+        ],
+      },
+      // 3
+      '3-min': {
+        args: [
+          'exercises/3/min.js',
         ],
       },
     },
