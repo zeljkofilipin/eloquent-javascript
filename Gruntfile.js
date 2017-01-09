@@ -16,17 +16,17 @@ module.exports = function(grunt) {
     run: {
       chess: {
         args: [
-          'chess.js',
+          'exercises/2/chess.js',
         ],
       },
       fizbuzz: {
         args: [
-          'fizbuzz.js',
+          'exercises/2/fizbuzz.js',
         ],
       },
       triangle: {
         args: [
-          'triangle.js',
+          'exercises/2/triangle.js',
         ],
       },
     },
