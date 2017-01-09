@@ -14,19 +14,19 @@ module.exports = function(grunt) {
 
     // Configure a run task
     run: {
-      chess: {
+      '2-triangle': {
         args: [
-          'exercises/2/chess.js',
+          'exercises/2/triangle.js',
         ],
       },
-      fizbuzz: {
+      '2-fizbuzz': {
         args: [
           'exercises/2/fizbuzz.js',
         ],
       },
-      triangle: {
+      '2-chess': {
         args: [
-          'exercises/2/triangle.js',
+          'exercises/2/chess.js',
         ],
       },
     },
