@@ -12,8 +12,14 @@ function range(start, end, step) {
 		step = 1;
 	}
 	let array = [];
-	for(let i = start; i <= end; i += step) {
-		array.push(i);
+	if (step > 0) {
+		for(let i = start; i <= end; i += step) {
+			array.push(i);
+		}
+	} else {
+		for(let i = start; i >= end; i += step) {
+			array.push(i);
+		}
 	}
 	return array;
 }
@@ -35,3 +41,4 @@ let array = range(1, 10);
 console.log(array);
 console.log(sum(array));
 console.log(range(1, 10, 2));
+console.log(range(5, 2, -1));
