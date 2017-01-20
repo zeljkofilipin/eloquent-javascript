@@ -14,4 +14,19 @@ function range(start, end) {
 	return array;
 }
 
-console.log(range(1, 10));
+/**
+ * Sum contents of an array.
+ * @param {array} array The array.
+ * @return {int} Sum of the contents of an array.
+ */
+function sum(array) {
+	let sum = 0;
+	array.forEach(function(element) {
+		sum += element;
+	});
+	return sum;
+}
+
+let array = range(1, 10);
+console.log(array);
+console.log(sum(array));
