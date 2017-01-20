@@ -51,6 +51,11 @@ module.exports = function(grunt) {
           'exercises/3/countChar.js',
         ],
       },
+      '4-sumRange': {
+        args: [
+          'exercises/4/sumRange.js',
+        ],
+      },
     },
 
   });
