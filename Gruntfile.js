@@ -56,6 +56,11 @@ module.exports = function(grunt) {
           'exercises/4/sumRange.js',
         ],
       },
+      '4-reverseArray': {
+        args: [
+          'exercises/4/reverseArray.js',
+        ],
+      },
     },
 
   });
