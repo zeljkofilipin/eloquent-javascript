@@ -66,6 +66,11 @@ module.exports = function(grunt) {
           'exercises/4/reverseArrayInPlace.js',
         ],
       },
+      '4-list': {
+        args: [
+          'exercises/4/list.js',
+        ],
+      },
     },
 
   });
