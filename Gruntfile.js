@@ -14,6 +14,7 @@ module.exports = function(grunt) {
 
     // Configure a run task
     run: {
+
       // 2
       '2-triangle': {
         args: [
@@ -30,6 +31,7 @@ module.exports = function(grunt) {
           'exercises/2/chess.js',
         ],
       },
+
       // 3
       '3-min': {
         args: [
@@ -51,6 +53,8 @@ module.exports = function(grunt) {
           'exercises/3/countChar.js',
         ],
       },
+
+      // 4
       '4-sumRange': {
         args: [
           'exercises/4/sumRange.js',
@@ -66,9 +70,14 @@ module.exports = function(grunt) {
           'exercises/4/reverseArrayInPlace.js',
         ],
       },
-      '4-list': {
+      '4-arrayToList': {
         args: [
-          'exercises/4/list.js',
+          'exercises/4/arrayToList.js',
+        ],
+      },
+      '4-listToArray': {
+        args: [
+          'exercises/4/listToArray.js',
         ],
       },
     },
