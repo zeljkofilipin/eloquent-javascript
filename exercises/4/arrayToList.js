@@ -23,5 +23,9 @@ function arrayToList(array) {
 	return list;
 }
 
-console.log(arrayToList([10, 20]));
-console.log(prepend(10, prepend(20, null)));
+if (require.main === module) {
+	console.log(arrayToList([10, 20]));
+	console.log(prepend(10, prepend(20, null)));
+}
+
+module.exports = {arrayToList};

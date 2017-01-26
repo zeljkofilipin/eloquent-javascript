@@ -1,6 +1,16 @@
 'use strict';
 
 /**
+ * Return nth element of a list.
+ * @param {list} list The list.
+ * @param {number} position The position in the list.
+ * @return {number} The element.
+ */
+function nth(list, position) {
+	return listToArray(list)[position];
+}
+
+/**
  * Convert list to array.
  * @param {list} list The list.
  * @param {array} array The array. Optional. Defaults to empty array.
@@ -18,5 +28,6 @@ function listToArray(list, array) {
 	}
 }
 
-let list = {value: 1, rest: {value: 2, rest: {value: 3, rest: null}}};
-console.log(listToArray(list));
+let arrayToList = require('./arrayToList').arrayToList;
+console.log(listToArray(arrayToList([10, 20, 30])));
+console.log(nth(arrayToList([10, 20, 30]), 1));
