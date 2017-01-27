@@ -10,15 +10,17 @@ function deepEqual(value1, value2) {
 	if (value1 === value2) {
 		return true;
 	}
-	if ((typeof value1 === 'object') && (typeof value2 === 'object')) {
-		let properties1 = Object.getOwnPropertyNames(value1);
-		let properties2 = Object.getOwnPropertyNames(value2);
 
-		let equal = [];
-		for (let i = 0; i < properties1.length; i++) {
-			equal.push(deepEqual(value1[properties1[i]], value2[properties2[i]]));
-		}
-			return equal;
+	if (value1 === null || typeof value1 !== 'object' ||
+		value2 === null || value2 !== 'object') {
+		return false;
+	}
+
+	let properties1 = Object.getOwnPropertyNames(value1);
+	let properties2 = Object.getOwnPropertyNames(value2);
+
+	for (let i = 0; i < properties1.length; i++) {
+		return (deepEqual(value1[properties1[i]], value2[properties2[i]]));
 	}
 }
 
