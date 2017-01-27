@@ -7,6 +7,9 @@
  * @return {boolean} Two objects are deep equal.
  */
 function deepEqual(value1, value2) {
+	if (value1 === value2) {
+		return true;
+	}
 	if ((typeof value1 === 'object') && (typeof value2 === 'object')) {
 		let properties1 = Object.getOwnPropertyNames(value1);
 		let properties2 = Object.getOwnPropertyNames(value2);
@@ -16,8 +19,6 @@ function deepEqual(value1, value2) {
 			equal.push(deepEqual(value1[properties1[i]], value2[properties2[i]]));
 		}
 			return equal;
-	} else {
-		return value1 === value2;
 	}
 }
 
