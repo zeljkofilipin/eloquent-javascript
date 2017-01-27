@@ -12,7 +12,7 @@ function deepEqual(value1, value2) {
 	}
 
 	if (value1 === null || typeof value1 !== 'object' ||
-		value2 === null || value2 !== 'object') {
+		value2 === null || typeof value2 !== 'object') {
 		return false;
 	}
 
