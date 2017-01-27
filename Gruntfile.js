@@ -80,6 +80,11 @@ module.exports = function(grunt) {
           'exercises/4/listToArray.js',
         ],
       },
+      '4-deepEqual': {
+        args: [
+          'exercises/4/deepEqual.js',
+        ],
+      },
     },
 
   });
