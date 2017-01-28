@@ -6,11 +6,9 @@
  * @return {array} The flattened array.
  */
 function flatten(arrays) {
-	let flat = [];
-	arrays.forEach(function(array) {
-		flat = flat.concat(array);
-	});
-	return flat;
+	return arrays.reduce(function(flat, array) {
+		return flat.concat(array);
+	}, []);
 }
 
 const arrays = [[1, 2, 3], [4, 5], [6]];
