@@ -8,9 +8,7 @@
 function flatten(arrays) {
 	let flat = [];
 	arrays.forEach(function(array) {
-		array.forEach(function(element) {
-			flat.push(element);
-		});
+		flat = flat.concat(array);
 	});
 	return flat;
 }
