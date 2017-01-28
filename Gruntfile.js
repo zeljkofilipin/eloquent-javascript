@@ -85,8 +85,15 @@ module.exports = function(grunt) {
           'exercises/4/deepEqual.js',
         ],
       },
-    },
 
+      // 5
+      '5-flatten': {
+        args: [
+          'exercises/5/flatten.js',
+        ],
+      },
+
+    },
   });
 
   // Default tasks
