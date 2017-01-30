@@ -92,6 +92,11 @@ module.exports = function(grunt) {
           'exercises/5/flatten.js',
         ],
       },
+      '5-motherChild': {
+        args: [
+          'exercises/5/motherChild.js',
+        ],
+      },
 
     },
   });
