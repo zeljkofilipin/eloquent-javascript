@@ -26,5 +26,10 @@ ancestry.forEach(function(person) {
 });
 
 // Your code here.
-
+let age = ancestry.map(function(person) {
+	return person.died - person.born;
+});
+// TODO: for now only average age of all people is computed,
+// not only mother-chide age difference.
+console.log(average(age));
 // → 31.2
