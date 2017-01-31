@@ -35,8 +35,14 @@ ancestry.forEach(function(person) {
 function motherChildAgeDifference(mother, child) {
 	return child.born - mother.born;
 }
-let age = ancestry.map(function(person) {
-	return person.died - person.born;
+
+let ageDifference = [];
+ancestry.forEach(function(person) {
+  let mother = byName[person.mother];
+	if (mother) {
+    ageDifference.push(motherChildAgeDifference(mother, person));
+	}
 });
-console.log(motherChildAgeDifference(ancestry[1], ancestry[0]));
+
+console.log(average(ageDifference));
 // → 31.2
