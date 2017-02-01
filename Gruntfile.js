@@ -97,6 +97,11 @@ module.exports = function(grunt) {
           'exercises/5/motherChild.js',
         ],
       },
+      '5-averageAgePerCentury': {
+        args: [
+          'exercises/5/averageAgePerCentury.js',
+        ],
+      },
 
     },
   });
