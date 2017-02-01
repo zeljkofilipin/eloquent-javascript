@@ -40,26 +40,25 @@ function century(person) {
 	return Math.ceil(person.died/100);
 }
 
-let centuries = {
-	'16': [],
-	'17': [],
-	'18': [],
-	'19': [],
-	'20': [],
-	'21': [],
-};
-
 /**
  * Age per century.
  * @param {array} ancestry The array of objects.
+ * @return {object} Age per century.
  */
 function agePerCentury(ancestry) {
+	let agesByCentury= {
+		'16': [],
+		'17': [],
+		'18': [],
+		'19': [],
+		'20': [],
+		'21': [],
+	};
 	ancestry.forEach(function(person) {
-		centuries[century(person)].push(age(person));
+		agesByCentury[century(person)].push(age(person));
 	});
+	return agesByCentury;
 }
-
-agePerCentury(ancestry);
 
 /**
  * Average age per century.
@@ -74,7 +73,7 @@ function averageAgePerCentury(agesByCentury) {
 	return averages;
 }
 
-console.log(averageAgePerCentury(centuries));
+console.log(averageAgePerCentury(agePerCentury(ancestry)));
 // → 16: 43.5
 //   17: 51.2
 //   18: 52.8
