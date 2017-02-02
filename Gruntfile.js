@@ -102,6 +102,11 @@ module.exports = function(grunt) {
           'exercises/5/averageAgePerCentury.js',
         ],
       },
+      '5-everySome': {
+        args: [
+          'exercises/5/everySome.js',
+        ],
+      },
 
     },
   });
