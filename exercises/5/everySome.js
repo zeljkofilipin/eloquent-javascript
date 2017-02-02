@@ -5,7 +5,13 @@
  * @return {bool}
  */
 function every(array, test) {
-	return true;
+	let passed = true;
+	array.forEach(function(element) {
+		if (!test(element)) {
+			passed = false;
+		}
+	});
+	return passed;
 }
 
 /**
