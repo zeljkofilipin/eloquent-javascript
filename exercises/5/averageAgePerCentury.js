@@ -68,7 +68,7 @@ function agePerCentury(ancestry) {
 function averageAgePerCentury(agesByCentury) {
 	let averages = {};
 	for( let i = 16; i < 22; i++) {
-		averages[i] = average(agesByCentury[i]);
+		averages[i] = average(agesByCentury[i]).toFixed(1);
 	}
 	return averages;
 }
