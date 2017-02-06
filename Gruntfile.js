@@ -108,6 +108,13 @@ module.exports = function(grunt) {
         ],
       },
 
+      // 6
+      '6-vector': {
+        args: [
+          'exercises/6/vector.js',
+        ],
+      },
+
     },
   });
 
