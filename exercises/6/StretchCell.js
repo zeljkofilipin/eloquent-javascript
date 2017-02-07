@@ -50,14 +50,13 @@ function StretchCell(inner, width, height) {
 	this.height = height;
 }
 StretchCell.prototype.minWidth = function() {
-  return this.inner.minWidth();
+  return Math.max(this.width, this.inner.minWidth());
 };
 StretchCell.prototype.minHeight = function() {
-  return this.inner.minHeight() + 1;
+  return Math.max(this.height, this.inner.minHeight());
 };
 StretchCell.prototype.draw = function(width, height) {
-  return this.inner.draw(width, height - 1)
-    .concat([repeat(' ', width)]);
+  return this.inner.draw(width, height);
 };
 
 let sc = new StretchCell(new TextCell('abc'), 1, 2);
