@@ -114,6 +114,11 @@ module.exports = function(grunt) {
           'exercises/6/vector.js',
         ],
       },
+      '6-StretchCell': {
+        args: [
+          'exercises/6/StretchCell.js',
+        ],
+      },
 
     },
   });
