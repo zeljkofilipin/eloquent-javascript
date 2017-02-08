@@ -119,6 +119,11 @@ module.exports = function(grunt) {
           'exercises/6/StretchCell.js',
         ],
       },
+      '6-sequenceInterface': {
+        args: [
+          'exercises/6/sequenceInterface.js',
+        ],
+      },
 
     },
   });
