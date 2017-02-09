@@ -14,7 +14,7 @@ function logFive(sequence) {
 }
 
 /**
- * Sequentialize the array
+ * Sequentialize an array
  * @param {array} array
  */
 function ArraySeq(array) {
@@ -32,7 +32,30 @@ ArraySeq.prototype.next = function() {
 logFive(new ArraySeq([1, 2]));
 // → 1
 // → 2
-// logFive(new RangeSeq(100, 1000));
+
+/**
+ * Sequentialize a range
+ * @param {number} start
+ * @param {number} end
+ */
+function RangeSeq(start, end) {
+	this.start = start;
+	this.end = end;
+	this.i = start;
+}
+RangeSeq.prototype.current = function() {
+	this.i++;
+	return this.i - 1;
+};
+RangeSeq.prototype.next = function() {
+	if (this.i < this.end) {
+		return true;
+	} else {
+		return false;
+	}
+};
+
+logFive(new RangeSeq(100, 1000));
 // → 100
 // → 101
 // → 102
