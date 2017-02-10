@@ -125,6 +125,13 @@ module.exports = function(grunt) {
         ],
       },
 
+      // 7
+      '7-SmarterPlantEater': {
+        args: [
+          'exercises/7/SmarterPlantEater.js',
+        ],
+      },
+
     },
   });
 
