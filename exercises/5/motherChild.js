@@ -20,7 +20,7 @@ function average(array) {
 }
 
 let byName = {};
-let ancestry = require('../../code/5/ancestry.js');
+let ancestry = require('./code/ancestry');
 ancestry.forEach(function(person) {
   byName[person.name] = person;
 });

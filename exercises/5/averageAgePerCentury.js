@@ -20,7 +20,7 @@ function average(array) {
 }
 
 // Your code here.
-let ancestry = require('../../code/5/ancestry.js');
+let ancestry = require('./code/ancestry');
 
 /**
  * Age.
