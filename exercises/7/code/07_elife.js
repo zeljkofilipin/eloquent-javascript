@@ -306,4 +306,4 @@ var valley = new LifelikeWorld(
    "*": Plant}
 );
 
-module.exports = { LifelikeWorld, Wall, PlantEater, Plant };
+module.exports = { LifelikeWorld, Wall, Plant };

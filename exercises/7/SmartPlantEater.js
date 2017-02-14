@@ -1,13 +1,24 @@
 // Your code here
 let LifelikeWorld = require('./code/07_elife.js').LifelikeWorld;
 let Wall = require('./code/07_elife.js').Wall;
-let PlantEater = require('./code/07_elife.js').PlantEater;
 let Plant = require('./code/07_elife.js').Plant;
 
 /**
  * Smart plant eater
  */
-function SmartPlantEater() {}
+function SmartPlantEater() {
+  this.energy = 20;
+}
+SmartPlantEater.prototype.act = function(view) {
+  let space = view.find(' ');
+  let plant = view.find('*');
+  if (this.energy > 10000 && space && plant)
+    return {type: 'reproduce', direction: space};
+  if (plant)
+    return {type: 'eat', direction: plant};
+  if (space)
+    return {type: 'move', direction: space};
+};
 
 let valley = new LifelikeWorld(
   ['############################',
@@ -23,13 +34,12 @@ let valley = new LifelikeWorld(
    '##****     ###***       *###',
    '############################'],
   {'#': Wall,
-   // 'O': SmartPlantEater,
-   'O': PlantEater,
+   'O': SmartPlantEater,
    '*': Plant}
 );
 
-for (let i = 0; i < 9; i++) {
+for (let i = 0; i < 10000; i++) {
 	valley.turn();
-	for (let j = 0; j < 999999999; j++) {}
+	for (let j = 0; j < 999999; j++) {}
 	console.log(valley.toString());
 }
