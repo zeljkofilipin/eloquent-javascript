@@ -131,6 +131,11 @@ module.exports = function(grunt) {
           'exercises/7/SmartPlantEater.js',
         ],
       },
+      '7-Tiger': {
+        args: [
+          'exercises/7/Tiger.js',
+        ],
+      },
 
     },
   });

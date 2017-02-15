@@ -38,8 +38,11 @@ let valley = new LifelikeWorld(
    '*': Plant}
 );
 
-for (let i = 0; i < 10000; i++) {
-	valley.turn();
-	for (let j = 0; j < 999999; j++) {}
-	console.log(valley.toString());
+if (require.main === module) {
+	for (let i = 0; i < 1000; i++) {
+		valley.turn();
+		for (let j = 0; j < 1000000; j++) {}
+		console.log(valley.toString());
+	}
 }
+module.exports = {SmartPlantEater};
