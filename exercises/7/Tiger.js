@@ -8,8 +8,17 @@ let SmartPlantEater = require('./SmartPlantEater').SmartPlantEater;
  * Tiger
  */
 function Tiger() {
+  this.energy = 1000;
 }
 Tiger.prototype.act = function(view) {
+  let space = view.find(' ');
+  let food = view.find('O');
+  if (this.energy > 1000)
+    return {type: 'reproduce', direction: space};
+  if (food)
+    return {type: 'eat', direction: food};
+  if (space)
+    return {type: 'move', direction: space};
 };
 
 let valley = new LifelikeWorld(

@@ -12,7 +12,7 @@ function SmartPlantEater() {
 SmartPlantEater.prototype.act = function(view) {
   let space = view.find(' ');
   let plant = view.find('*');
-  if (this.energy > 10000 && space && plant)
+  if (this.energy > 100)
     return {type: 'reproduce', direction: space};
   if (plant)
     return {type: 'eat', direction: plant};
