@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Does every element of the array pass the test?
  * @param {array} array
