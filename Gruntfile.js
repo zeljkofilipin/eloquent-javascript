@@ -137,6 +137,13 @@ module.exports = function(grunt) {
         ],
       },
 
+      // 8
+      '8-retry': {
+        args: [
+          'exercises/8/retry.js',
+        ],
+      },
+
     },
   });
 
