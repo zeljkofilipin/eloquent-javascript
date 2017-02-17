@@ -21,10 +21,16 @@ function primitiveMultiply(a, b) {
  * reliableMultiply
  * @param {number} a
  * @param {number} b
+ * @return {number}
  */
 function reliableMultiply(a, b) {
-  // Your code here.
-  primitiveMultiply(a, b);
+	try {
+		return primitiveMultiply(a, b);
+	} catch (e) {
+		if (e instanceof MultiplicatorUnitFailure) {
+			return reliableMultiply(a, b);
+		}
+	}
 }
 
 console.log(reliableMultiply(8, 8));
