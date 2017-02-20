@@ -144,6 +144,11 @@ module.exports = function(grunt) {
           'exercises/8/retry.js',
         ],
       },
+      '8-withBoxUnlocked': {
+        args: [
+          'exercises/8/withBoxUnlocked.js',
+        ],
+      },
 
     },
   });
