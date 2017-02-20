@@ -40,9 +40,9 @@ let valley = new LifelikeWorld(
 );
 
 if (require.main === module) {
-	for (let i = 0; i < 1000; i++) {
+	for (let i = 0; i < 100; i++) {
 		valley.turn();
-		for (let j = 0; j < 1000000; j++) {}
+		for (let j = 0; j < 1; j++) {}
 		console.log(valley.toString());
 	}
 }
