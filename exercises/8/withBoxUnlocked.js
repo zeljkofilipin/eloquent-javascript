@@ -24,7 +24,12 @@ let box = {
  * @param {function} body
  */
 function withBoxUnlocked(body) {
-  // Your code here.
+	try {
+		box.unlock();
+		body();
+	} finally {
+		box.lock();
+	}
 }
 
 withBoxUnlocked(function() {
