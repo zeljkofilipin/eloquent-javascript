@@ -150,6 +150,13 @@ module.exports = function(grunt) {
         ],
       },
 
+      // 9
+      '9-regexp_golf': {
+        args: [
+          'exercises/9/regexp_golf.js',
+        ],
+      },
+
     },
   });
 
