@@ -33,8 +33,8 @@ verify(/.../,
 /**
  * verify
  * @param {regexp} regexp
- * @param {boolean} yes
- * @param {boolean} no
+ * @param {array} yes
+ * @param {array} no
  */
 function verify(regexp, yes, no) {
   // Ignore unfinished exercises
