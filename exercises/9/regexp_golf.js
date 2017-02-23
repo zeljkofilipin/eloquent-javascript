@@ -2,7 +2,7 @@
 // from http://eloquentjavascript.net/code/#9.1
 // Fill in the regular expressions
 
-verify(/.../,
+verify(/ca(r|t)/,
        ['my car', 'bad cats'],
        ['camper', 'high art']);
 
