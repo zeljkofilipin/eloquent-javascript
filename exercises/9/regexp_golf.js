@@ -10,7 +10,7 @@ verify(/pr*op/,
        ['pop culture', 'mad props'],
        ['plop']);
 
-verify(/.../,
+verify(/ferr(et|y|ari)/,
        ['ferret', 'ferry', 'ferrari'],
        ['ferrum', 'transfer A']);
 
