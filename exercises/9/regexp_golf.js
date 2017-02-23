@@ -6,7 +6,7 @@ verify(/ca(r|t)/,
        ['my car', 'bad cats'],
        ['camper', 'high art']);
 
-verify(/.../,
+verify(/pr*op/,
        ['pop culture', 'mad props'],
        ['plop']);
 
