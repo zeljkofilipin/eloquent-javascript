@@ -22,7 +22,7 @@ verify(/\s(\.|,|:|;)/,
        ['bad punctuation .'],
        ['escape the dot']);
 
-verify(/.../,
+verify(/\w{7,}/,
        ['hottentottententen'],
        ['no', 'hotten totten tenten']);
 
