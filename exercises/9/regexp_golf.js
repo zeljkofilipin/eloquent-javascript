@@ -26,7 +26,7 @@ verify(/\w{7,}/,
        ['hottentottententen'],
        ['no', 'hotten totten tenten']);
 
-verify(/.../,
+verify(/\b[a-df-z]+\b/,
        ['red platypus', 'wobbling nest'],
        ['earth bed', 'learning ape']);
 
