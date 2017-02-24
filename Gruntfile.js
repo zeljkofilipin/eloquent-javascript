@@ -156,6 +156,11 @@ module.exports = function(grunt) {
           'exercises/9/regexp_golf.js',
         ],
       },
+      '9-quoting': {
+        args: [
+          'exercises/9/quoting.js',
+        ],
+      },
 
     },
   });
