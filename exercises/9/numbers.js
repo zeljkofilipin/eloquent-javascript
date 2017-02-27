@@ -1,7 +1,7 @@
 'use strict';
 // From http://eloquentjavascript.net/code/#9.3
 // Fill in this regular expression.
-let number = /^...$/;
+let number = /^(\+|-|)(\d+(\.\d*)?|\.\d+)([eE](\+|-|)\d+)?$/;
 
 // Tests:
 ['1', '-1', '+15', '1.55', '.5', '5.', '1.3e2', '1E-4',
