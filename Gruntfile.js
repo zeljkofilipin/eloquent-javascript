@@ -161,6 +161,11 @@ module.exports = function(grunt) {
           'exercises/9/quoting.js',
         ],
       },
+      '9-numbers': {
+        args: [
+          'exercises/9/numbers.js',
+        ],
+      },
 
     },
   });
