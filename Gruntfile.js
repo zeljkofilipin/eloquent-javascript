@@ -167,6 +167,13 @@ module.exports = function(grunt) {
         ],
       },
 
+      // 10
+      '10-months': {
+        args: [
+          'exercises/10/months.js',
+        ],
+      },
+
     },
   });
 
