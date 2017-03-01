@@ -174,6 +174,13 @@ module.exports = function(grunt) {
         ],
       },
 
+      // 11
+      '11-arrays': {
+        args: [
+          'exercises/11/arrays.js',
+        ],
+      },
+
     },
   });
 
