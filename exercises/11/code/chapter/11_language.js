@@ -154,3 +154,4 @@ specialForms["fun"] = function(args, env) {
     return evaluate(body, localEnv);
   };
 };
+module.exports = { run };
