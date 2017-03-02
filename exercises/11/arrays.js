@@ -1,17 +1,10 @@
 'use strict';
 let run = require('./code/chapter/11_language').run;
-
-run(
-	'do(define(total, 0),',
-	'	define(count, 1),',
-	'	while(<(count, 11),',
-	'		do(define(total, +(total, count)),',
-	'			define(count, +(count, 1)))),',
-	'	print(total))');
+let topEnv = require('./code/chapter/11_language').topEnv;
 
 // from http://eloquentjavascript.net/code/#11.1
 // Modify these definitions...
-/*
+
 topEnv['array'] = '...';
 
 topEnv['length'] = '...';
@@ -27,4 +20,3 @@ run('do(define(sum, fun(array,',
     '        sum))),',
     '   print(sum(array(1, 2, 3))))');
 // → 6
-*/
