@@ -5,12 +5,21 @@ let topEnv = require('./code/11_language').topEnv;
 // from http://eloquentjavascript.net/code/#11.1
 // Modify these definitions...
 
-topEnv['array'] = '...';
+topEnv['array'] = function(...args) {
+	return args;
+};
 
-topEnv['length'] = '...';
+topEnv['length'] = function(array) {
+	return array.length;
+};
 
-topEnv['element'] = '...';
+topEnv['element'] = function(array, i) {
+	return array[i];
+};
 
+run('do(print(array(1, 2, 3)))');
+run('do(print(length(array(1, 2, 3))))');
+run('do(print(element(array(1, 2, 3), 0)))');
 run('do(define(sum, fun(array,',
     '     do(define(i, 0),',
     '        define(sum, 0),',
