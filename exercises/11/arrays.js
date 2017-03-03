@@ -1,6 +1,6 @@
 'use strict';
-let run = require('./code/chapter/11_language').run;
-let topEnv = require('./code/chapter/11_language').topEnv;
+let run = require('./code/11_language').run;
+let topEnv = require('./code/11_language').topEnv;
 
 // from http://eloquentjavascript.net/code/#11.1
 // Modify these definitions...
