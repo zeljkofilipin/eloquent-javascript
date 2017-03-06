@@ -180,6 +180,11 @@ module.exports = function(grunt) {
           'exercises/11/arrays.js',
         ],
       },
+      '11-comments': {
+        args: [
+          'exercises/11/comments.js',
+        ],
+      },
 
     },
   });
