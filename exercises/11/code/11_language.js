@@ -153,4 +153,4 @@ specialForms["fun"] = function(args, env) {
     return evaluate(body, localEnv);
   };
 };
-module.exports = { parse, run, specialForms, topEnv};
+module.exports = { evaluate, parse, run, specialForms, topEnv};
