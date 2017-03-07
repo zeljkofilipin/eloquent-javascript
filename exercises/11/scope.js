@@ -23,5 +23,13 @@ run('do(define(x, 4),',
     '   setx(50),',
     '   print(x))');
 // → 50
-run('set(quux, true)');
+try {
+  run('set(quux, true)');
+} catch (e) {
+  if (e instanceof ReferenceError) {
+    console.log(e);
+  } else {
+    throw e;
+ }
+}
 // → Some kind of ReferenceError
