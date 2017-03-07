@@ -185,6 +185,11 @@ module.exports = function(grunt) {
           'exercises/11/comments.js',
         ],
       },
+      '11-scope': {
+        args: [
+          'exercises/11/scope.js',
+        ],
+      },
 
     },
   });
