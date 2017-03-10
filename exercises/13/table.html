@@ -15,6 +15,28 @@
     <script>
       function buildTable(data) {
         var table = document.createElement("table");
+
+        var tr = document.createElement("tr");
+	      var keys = Object.keys(data[0]);
+	      keys.forEach(function(key) {
+          var th = document.createElement("th");
+		      th.textContent = key;
+          tr.appendChild(th);
+	      });
+        table.appendChild(tr);
+
+	      data.forEach(function(mountain) {
+          var tr = document.createElement("tr");
+	        keys.forEach(function(key) {
+            var td = document.createElement("td");
+			      td.textContent = mountain[key];
+			      if (typeof mountain[key] == "number")
+				      td.style.textAlign = "right";
+            tr.appendChild(td);
+	        });
+          table.appendChild(tr);
+	      });
+
         return table;
       }
     
