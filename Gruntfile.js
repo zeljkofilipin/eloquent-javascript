@@ -197,6 +197,11 @@ module.exports = function(grunt) {
           'exercises/13/table.js',
         ],
       },
+      '13-elements': {
+        args: [
+          'exercises/13/elements.js',
+        ],
+      },
 
     },
   });
