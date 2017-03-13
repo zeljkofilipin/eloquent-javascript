@@ -3,15 +3,19 @@
  * byTagName
  * @param {object} node
  * @param {object} tagName
- * @return {object}
+ * @return {object} found
  */
 function byTagName(node, tagName) {
-  var found = [];
+  let found = [];
   tagName = tagName.toUpperCase();
 
+  /**
+  * explore
+  * @param {object} node
+  */
   function explore(node) {
-    for (var i = 0; i < node.childNodes.length; i++) {
-      var child = node.childNodes[i];
+    for (let i = 0; i < node.childNodes.length; i++) {
+      let child = node.childNodes[i];
       if (child.nodeType == document.ELEMENT_NODE) {
         if (child.nodeName == tagName)
           found.push(child);
