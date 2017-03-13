@@ -1,6 +1,6 @@
 'use strict';
 /**
- * verify
+ * buildTable
  * @param {object} data
  * @return {object} table
  */
