@@ -1,13 +1,12 @@
 <!-- from http://eloquentjavascript.net/code/#13.3 -->
 <!doctype html>
-<script src="code/mountains.js"></script>
-<script src="code/chapter/13_dom.js"></script>
-
-<img src="img/cat.png" id="cat" style="position: absolute">
-<img src="img/hat.png" id="hat" style="position: absolute">
+<script src="cat.js"></script>
+<img src="code/cat.png" id="cat" style="position: absolute">
+<img src="code/hat.png" id="hat" style="position: absolute">
 
 <script>
+  var start = null;
   var cat = document.querySelector("#cat");
   var hat = document.querySelector("#hat");
-  // Your code here.
+  window.requestAnimationFrame(step);
 </script>
