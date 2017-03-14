@@ -202,6 +202,11 @@ module.exports = function(grunt) {
           'exercises/13/elements.js',
         ],
       },
+      '13-cat': {
+        args: [
+          'exercises/13/cat.js',
+        ],
+      },
 
     },
   });
