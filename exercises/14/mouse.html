@@ -13,6 +13,11 @@
   }
 </style>
 
+<div class="trail">
 <script>
-  // Your code here.
+	var trail = document.querySelector("div");
+	document.onmousemove = function(event) {
+		trail.style.left = event.clientX + 'px';
+		trail.style.top = event.clientY + 'px';
+	}
 </script>
