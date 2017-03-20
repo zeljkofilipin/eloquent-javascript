@@ -7,8 +7,21 @@
   <div data-tabname="three">Tab three</div>
 </div>
 <script>
-  function asTabs(node) {
-    // Your code here.
-  }
-  asTabs(document.querySelector("#wrapper"));
+	'use strict';
+
+	function asTabs(node) {
+		var childNodes = Array.prototype.slice.call(node.childNodes);
+		childNodes.forEach(function(childNode) {
+			if (childNode.tagName === 'DIV') {
+				childNode.style.display = 'none';
+				var button = document.createElement('button');
+				button.innerHTML = childNode.getAttribute('data-tabname')
+				node.appendChild(button);
+			}
+		});
+		addEventListener('click', function( event ) {
+			console.log(event.target);
+		});
+	}
+	asTabs(document.querySelector("#wrapper"));
 </script>
