@@ -1,4 +1,5 @@
 'use strict';
+
 // from http://eloquentjavascript.net/code/#10.1
 // Your code here.
 let month = function() {

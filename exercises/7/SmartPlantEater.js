@@ -1,4 +1,5 @@
 'use strict';
+
 // Your code here
 let LifelikeWorld = require('./code/07_elife.js').LifelikeWorld;
 let Wall = require('./code/07_elife.js').Wall;

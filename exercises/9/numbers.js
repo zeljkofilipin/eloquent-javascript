@@ -1,4 +1,5 @@
 'use strict';
+
 // From http://eloquentjavascript.net/code/#9.3
 // Fill in this regular expression.
 let number = /^(\+|-|)(\d+(\.\d*)?|\.\d+)([eE](\+|-|)\d+)?$/;

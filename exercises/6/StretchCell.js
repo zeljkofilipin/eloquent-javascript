@@ -1,5 +1,6 @@
 // From http://eloquentjavascript.net/code/chapter/06_object.js
 'use strict';
+
 /**
  * Repeat.
  * @param {string} string

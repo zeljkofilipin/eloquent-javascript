@@ -1,4 +1,5 @@
 'use strict';
+
 /**
  * buildTable
  * @param {object} data

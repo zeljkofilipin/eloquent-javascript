@@ -1,4 +1,5 @@
 'use strict';
+
 // from http://eloquentjavascript.net/code/#9.1
 // Fill in the regular expressions
 
