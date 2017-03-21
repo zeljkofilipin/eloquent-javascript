@@ -24,6 +24,11 @@
 			node.appendChild(button);
 		});
 		addEventListener('click', function( event ) {
+			var buttons = Array.prototype.slice.call(document.getElementsByTagName('button'));
+			buttons.forEach(function(button) {
+				button.style.backgroundColor = '';
+			});
+			event.target.style.backgroundColor = 'green';
 			divs.forEach(function(div) {
 				if (div.getAttribute('data-tabname') === event.target.innerHTML ) {
 					div.style.display = 'block';
