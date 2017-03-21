@@ -11,20 +11,24 @@
 
 	function asTabs(node) {
 		var childNodes = Array.prototype.slice.call(node.childNodes);
+		var divs = [];
 		childNodes.forEach(function(childNode) {
 			if (childNode.tagName === 'DIV') {
-				childNode.style.display = 'none';
-				var button = document.createElement('button');
-				button.innerHTML = childNode.getAttribute('data-tabname');
-				node.appendChild(button);
+				divs.push(childNode);
 			}
 		});
+		divs.forEach(function(div) {
+			div.style.display = 'none';
+			var button = document.createElement('button');
+			button.innerHTML = div.getAttribute('data-tabname');
+			node.appendChild(button);
+		});
 		addEventListener('click', function( event ) {
-			childNodes.forEach(function(childNode) {
-				if (childNode.tagName === 'DIV' && childNode.getAttribute('data-tabname') === event.target.innerHTML ) {
-					childNode.style.display = 'block';
-				} else if (childNode.tagName === 'DIV' ) {
-					childNode.style.display = 'none';
+			divs.forEach(function(div) {
+				if (div.getAttribute('data-tabname') === event.target.innerHTML ) {
+					div.style.display = 'block';
+				} else {
+					div.style.display = 'none';
 				}
 			});
 		});
