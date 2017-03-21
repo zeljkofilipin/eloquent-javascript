@@ -15,12 +15,18 @@
 			if (childNode.tagName === 'DIV') {
 				childNode.style.display = 'none';
 				var button = document.createElement('button');
-				button.innerHTML = childNode.getAttribute('data-tabname')
+				button.innerHTML = childNode.getAttribute('data-tabname');
 				node.appendChild(button);
 			}
 		});
 		addEventListener('click', function( event ) {
-			console.log(event.target);
+			childNodes.forEach(function(childNode) {
+				if (childNode.tagName === 'DIV' && childNode.getAttribute('data-tabname') === event.target.innerHTML ) {
+					childNode.style.display = 'block';
+				} else if (childNode.tagName === 'DIV' ) {
+					childNode.style.display = 'none';
+				}
+			});
 		});
 	}
 	asTabs(document.querySelector("#wrapper"));
