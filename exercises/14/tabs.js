@@ -1,8 +1,12 @@
 'use strict';
 
+/**
+ * asTabs
+ * @param {object} node
+ */
 function asTabs(node) {
-	var childNodes = Array.prototype.slice.call(node.childNodes);
-	var divs = [];
+	let childNodes = Array.prototype.slice.call(node.childNodes);
+	let divs = [];
 	childNodes.forEach(function(childNode) {
 		if (childNode.tagName === 'DIV') {
 			divs.push(childNode);
@@ -10,12 +14,13 @@ function asTabs(node) {
 	});
 	divs.forEach(function(div) {
 		div.style.display = 'none';
-		var button = document.createElement('button');
+		let button = document.createElement('button');
 		button.innerHTML = div.getAttribute('data-tabname');
 		node.appendChild(button);
 	});
 	addEventListener('click', function( event ) {
-		var buttons = Array.prototype.slice.call(document.getElementsByTagName('button'));
+		let buttonCollection = document.getElementsByTagName('button');
+		let buttons = Array.prototype.slice.call(buttonCollection);
 		buttons.forEach(function(button) {
 			button.style.backgroundColor = '';
 		});
@@ -29,4 +34,4 @@ function asTabs(node) {
 		});
 	});
 }
-asTabs(document.querySelector("#wrapper"));
+asTabs(document.querySelector('#wrapper'));
