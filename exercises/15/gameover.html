@@ -1,0 +1,26 @@
+<!-- from http://eloquentjavascript.net/code/#15.1 -->
+<!doctype html>
+<script src="code/chapter/15_game.js"></script>
+<script src="code/game_levels.js"></script>
+
+<link rel="stylesheet" href="css/game.css">
+
+<body>
+<script>
+  // The old runGame function. Modify it...
+  function runGame(plans, Display) {
+    function startLevel(n) {
+      runLevel(new Level(plans[n]), Display, function(status) {
+        if (status == "lost")
+          startLevel(n);
+        else if (n < plans.length - 1)
+          startLevel(n + 1);
+        else
+          console.log("You win!");
+      });
+    }
+    startLevel(0);
+  }
+  runGame(GAME_LEVELS, DOMDisplay);
+</script>
+</body>
