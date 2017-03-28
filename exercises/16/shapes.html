@@ -3,14 +3,17 @@
 <canvas width="600" height="200"></canvas>
 <script>
 	var cx = document.querySelector("canvas").getContext("2d");
+
+	// trapezoid
 	cx.beginPath();
-	cx.moveTo(100, 0);
-	cx.lineTo(200, 0);
-	cx.lineTo(300, 100);
-	cx.lineTo(0, 100);
-	cx.lineTo(100, 0);
+	cx.moveTo(25, 0);
+	cx.lineTo(50, 0);
+	cx.lineTo(75, 25);
+	cx.lineTo(0, 25);
+	cx.lineTo(25, 0);
 	cx.stroke();
 
+	// red diamond
 	cx.rotate(Math.PI/4);
 	cx.fillStyle = 'red';
 	cx.fillRect(100, 25, 50, 50);
