@@ -208,6 +208,13 @@ module.exports = function(grunt) {
         ],
       },
 
+      // 17
+      '17-content': {
+        args: [
+          'exercises/17/content.js',
+        ],
+      },
+
     },
   });
 
