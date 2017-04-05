@@ -1,11 +1,16 @@
 'use strict';
 
-const XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+let headers = [
+	'text/plain',
+	'text/html',
+	'application/json',
+	'application/rainbows+unicorns',
+];
+
 let req = new XMLHttpRequest();
-req.open('GET', 'http://eloquentjavascript.net/author', false);
-req.setRequestHeader('Accept', 'text/plain');
-// req.setRequestHeader('Accept', 'text/html');
-// req.setRequestHeader('Accept', 'application/json');
-// req.setRequestHeader('Accept', 'application/rainbows+unicorns');
-req.send(null);
-console.log(req.responseText);
+headers.forEach(function(header) {
+	req.open('GET', 'http://eloquentjavascript.net/author', false);
+	req.setRequestHeader('Accept', header);
+	req.send(null);
+	console.log(req.responseText);
+});
