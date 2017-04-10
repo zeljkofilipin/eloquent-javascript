@@ -7,5 +7,14 @@
 <pre id="output"></pre>
 
 <script>
-  // Your code here.
+	document.querySelector('#button').addEventListener('click', function() {
+		var code = document.querySelector('#code').value;
+		var output = document.querySelector('#output');
+		try {
+			var result = new Function(code)();
+			output.innerText = String(result);
+		} catch (e) {
+			output.innerText = 'Error: ' + e;
+		}
+	});
 </script>
