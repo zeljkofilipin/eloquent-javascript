@@ -13,4 +13,20 @@
     terms.push(name);
 
   // Your code here.
+	document.querySelector('#field').addEventListener('input', function() {
+		var field = this;
+		var regexp = new RegExp(field.value)
+		var suggestions = document.querySelector('#suggestions');
+		suggestions.innerHTML = '';
+		terms.forEach(function(term) {
+			if (regexp.test(term)) {
+				var div = document.createElement('div');
+				div.innerHTML = term;
+				div.addEventListener('click', function() {
+					field.value = term;
+				});
+				suggestions.appendChild(div);
+			}
+		});
+	});
 </script>
