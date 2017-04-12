@@ -17,3 +17,20 @@ for (var i = 0; i < y; i++) {
 		div.appendChild(checkbox);
 	}
 }
+
+// next generation
+next.addEventListener('click', function() {
+
+	// is checkbox set?
+	var world = [];
+	for (var i = 0; i < y; i++) {
+		var row = [];
+		for (var j = 0; j < x; j++) {
+			var checkbox = document.querySelector('#id' + i + j);
+			row.push(checkbox.checked);
+		}
+		world.push(row);
+	}
+	console.log(world);
+
+});
