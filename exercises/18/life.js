@@ -17,7 +17,7 @@ function createGrid(x, y) {
 		for (let j = 0; j < x; j++) {
 			let checkbox = document.createElement('input');
 			checkbox.type = 'checkbox';
-			checkbox.id = 'id' + i + j;
+			checkbox.id = 'id' + j + i;
 			div.appendChild(checkbox);
 		}
 	}
@@ -32,7 +32,7 @@ function previousGeneration() {
 	for (let i = 0; i < y; i++) {
 		let row = [];
 		for (let j = 0; j < x; j++) {
-			let checkbox = document.querySelector('#id' + i + j);
+			let checkbox = document.querySelector('#id' + j + i);
 			row.push(checkbox.checked);
 		}
 		world.push(row);
