@@ -26,7 +26,7 @@ function createGrid(x, y) {
 /**
  * @return {array} world
  */
-function nextGeneration() {
+function previousGeneration() {
 	// is checkbox set?
 	let world = [];
 	for (let i = 0; i < y; i++) {
@@ -40,6 +40,13 @@ function nextGeneration() {
 	return world;
 }
 
+/**
+ * @return {array} world
+ */
+function nextGeneration() {
+	let previousWorld = previousGeneration();
+	return previousWorld;
+}
+
 createGrid(x, y);
 next.addEventListener('click', nextGeneration);
-console.log(nextGeneration());
