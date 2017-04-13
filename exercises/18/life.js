@@ -41,10 +41,23 @@ function previousGeneration() {
 }
 
 /**
+ * @param {array} world
+ */
+function updateWorld(world) {
+	for (let i = 0; i < world.length; i++) {
+		for (let j = 0; j < world[0].length; j++) {
+			let checkbox = document.querySelector('#id' + j + i);
+			checkbox.checked = !checkbox.checked;
+		}
+	}
+}
+
+/**
  * @return {array} world
  */
 function nextGeneration() {
 	let previousWorld = previousGeneration();
+	updateWorld(previousWorld);
 	return previousWorld;
 }
 
