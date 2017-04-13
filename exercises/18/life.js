@@ -1,10 +1,10 @@
 // the initial elements
-let grid = document.querySelector('#grid');
-let next = document.querySelector('#next');
+const grid = document.querySelector('#grid');
+const next = document.querySelector('#next');
 
 // size of the grid
-let x = 3;
-let y = 3;
+const x = 3;
+const y = 3;
 
 // create grid
 for (let i = 0; i < y; i++) {
