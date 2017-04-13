@@ -24,22 +24,22 @@ function createGrid(x, y) {
 }
 
 /**
+ * @return {array} world
  */
 function nextGeneration() {
-	next.addEventListener('click', function() {
-		// is checkbox set?
-		let world = [];
-		for (let i = 0; i < y; i++) {
-			let row = [];
-			for (let j = 0; j < x; j++) {
-				let checkbox = document.querySelector('#id' + i + j);
-				row.push(checkbox.checked);
-			}
-			world.push(row);
+	// is checkbox set?
+	let world = [];
+	for (let i = 0; i < y; i++) {
+		let row = [];
+		for (let j = 0; j < x; j++) {
+			let checkbox = document.querySelector('#id' + i + j);
+			row.push(checkbox.checked);
 		}
-		console.log(world);
-	});
+		world.push(row);
+	}
+	return world;
 }
 
 createGrid(x, y);
-nextGeneration();
+next.addEventListener('click', nextGeneration);
+console.log(nextGeneration());
