@@ -23,19 +23,23 @@ function createGrid(x, y) {
 	}
 }
 
-createGrid(x, y);
-
-// next generation
-next.addEventListener('click', function() {
-	// is checkbox set?
-	let world = [];
-	for (let i = 0; i < y; i++) {
-		let row = [];
-		for (let j = 0; j < x; j++) {
-			let checkbox = document.querySelector('#id' + i + j);
-			row.push(checkbox.checked);
+/**
+ */
+function nextGeneration() {
+	next.addEventListener('click', function() {
+		// is checkbox set?
+		let world = [];
+		for (let i = 0; i < y; i++) {
+			let row = [];
+			for (let j = 0; j < x; j++) {
+				let checkbox = document.querySelector('#id' + i + j);
+				row.push(checkbox.checked);
+			}
+			world.push(row);
 		}
-		world.push(row);
-	}
-	console.log(world);
-});
+		console.log(world);
+	});
+}
+
+createGrid(x, y);
+nextGeneration();
