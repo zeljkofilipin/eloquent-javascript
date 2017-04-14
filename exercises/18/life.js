@@ -41,24 +41,86 @@ function previousGeneration() {
 }
 
 /**
+ * @param {object} checkbox
+ * @return {array}
+ */
+function neighbors(checkbox) {
+	let location = checkbox.id.slice(2, 4);
+	let x = Number(location.slice(0, 1));
+	let y = Number(location.slice(1, 2));
+
+	let possibleNeighbors = [];
+	// row above
+	possibleNeighbors.push(document.querySelector('#id' + (x - 1) + (y - 1)));
+	possibleNeighbors.push(document.querySelector('#id' + (x + 0) + (y - 1)));
+	possibleNeighbors.push(document.querySelector('#id' + (x + 1) + (y - 1)));
+	// cell's row
+	possibleNeighbors.push(document.querySelector('#id' + (x - 1) + (y + 0)));
+	possibleNeighbors.push(document.querySelector('#id' + (x + 1) + (y + 0)));
+	// row below
+	possibleNeighbors.push(document.querySelector('#id' + (x - 1) + (y + 1)));
+	possibleNeighbors.push(document.querySelector('#id' + (x + 0) + (y + 1)));
+	possibleNeighbors.push(document.querySelector('#id' + (x + 1) + (y + 1)));
+
+	// remove null from array
+	let neighbors = possibleNeighbors.filter( function(neighbor) {
+		if(neighbor) {
+			return neighbor;
+		}
+	});
+	return neighbors;
+}
+
+/**
+ * @param {array} neighbors
+ * @return {int}
+ */
+function numberOfAliveNeighbors(neighbors) {
+	let number = 0;
+	neighbors.forEach(function(neighbor) {
+		if(neighbor.checked) {
+			number++;
+		}
+	});
+	return number;
+}
+
+/**
+ * @param {object} checkbox
+ * @return {boolean}
+ */
+function isCellAlive(checkbox) {
+	let alive = checkbox.checked;
+	let number = numberOfAliveNeighbors(neighbors(checkbox));
+	if (alive && number === 2) {
+		return true;
+	} else if (alive && number === 3) {
+		return true;
+	} else if (alive && number < 2) {
+		return false;
+	} else if (alive && number > 3) {
+		return false;
+	} else if (!alive && number === 3) {
+		return true;
+	}
+}
+
+/**
  * @param {array} world
  */
 function updateWorld(world) {
 	for (let i = 0; i < world.length; i++) {
 		for (let j = 0; j < world[0].length; j++) {
 			let checkbox = document.querySelector('#id' + j + i);
-			checkbox.checked = !checkbox.checked;
+			checkbox.checked = isCellAlive(checkbox);
 		}
 	}
 }
 
 /**
- * @return {array} world
  */
 function nextGeneration() {
-	let previousWorld = previousGeneration();
-	updateWorld(previousWorld);
-	return previousWorld;
+	updateWorld(previousGeneration());
 }
 
 createGrid(x, y);
