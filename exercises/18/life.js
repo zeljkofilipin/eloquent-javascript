@@ -25,6 +25,9 @@ function createGrid(x, y) {
 			let checkbox = document.createElement('input');
 			checkbox.type = 'checkbox';
 			checkbox.id = 'id' + j + i;
+			if (getRandomIntInclusive(0, 1)) {
+				checkbox.checked = true;
+			}
 			div.appendChild(checkbox);
 		}
 	}
